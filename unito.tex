@@ -154,7 +154,10 @@ heightrounded}
 		\paragraph{Teorema
 			\Roman{teorema} \label{thm:#2} #1} 
 		#3}
-\newcommand{\dimostrazione}[2]{\paragraph{\textit{dim.} \hyperref[thm:#1]{(\Roman{thm#1})}} #2}
+\newcommand{\dimostrazione}[2]{\paragraph{\textit{dim.} \hyperref[thm:#1]{(\Roman{thm#1})}} #2\marginpar{$\qed$}
+\begin{flushright}
+	$\qed$
+\end{flushright}}
 
 \newcommand{\proposizione}[3][]{
     \stepcounter{proposizione}
@@ -162,7 +165,10 @@ heightrounded}
 		\paragraph{Proposizione
 			\textit{p.}\roman{proposizione} \label{prp:#2} #1} 
 		#3}
-\newcommand{\dimostrazioneprop}[2]{\paragraph{\textit{dim.} \hyperref[prp:#1]{(\textit{p.}\roman{prp#1})}} #2}
+\newcommand{\dimostrazioneprop}[2]{\paragraph{\textit{dim.} \hyperref[prp:#1]{(\textit{p.}\roman{prp#1})}} #2
+\begin{flushright}
+	$\qed$
+\end{flushright}}
 
 %%%%
 
