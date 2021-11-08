@@ -167,6 +167,14 @@ heightrounded}
 		#3}
 \newcommand{\dimostrazioneprop}[2]{\paragraph{\textit{dim.} \hyperref[prp:#1]{(\textit{p.}\roman{prp#1})}} #2}
 
+\newcommand{\lemma}[3][]{
+    \stepcounter{lemma}
+		\newcounter{lmm#2}\addtocounter{lmm#2}{\thelemma}
+		\paragraph{Lemma
+			\textit{l.}\roman{lemma} \label{lmm:#2} #1} 
+		#3}
+\newcommand{\dimostrazionelem}[2]{\paragraph{\textit{dim.} \hyperref[lmm:#1]{(\textit{l.}\roman{lmm#1})}} #2}
+
 %%%%
 
 \newcommand{\numerato}[1]{\begin{enumerate}
