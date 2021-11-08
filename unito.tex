@@ -149,8 +149,7 @@ heightrounded}
 \newcommand{\esercizio}[3][]{\paragraph{Esercizio #1} #2 
 \paragraph{Soluzione} #3}
 
-\usepackage[fulladjust]{marginnote} %to use marginnote for qed
-\newcommand{\QED}{\qed} %new qed definition
+\usepackage[fulladjust]{marginnote} %to use marginnote for date notes
 
 \newcommand{\teorema}[3][]{
     \stepcounter{teorema}
@@ -158,7 +157,7 @@ heightrounded}
 		\paragraph{Teorema
 			\Roman{teorema} \label{thm:#2} #1} 
 		#3}
-\newcommand{\dimostrazione}[2]{\paragraph{\textit{dim.} \hyperref[thm:#1]{(\Roman{thm#1})}} #2\QED}
+\newcommand{\dimostrazione}[2]{\paragraph{\textit{dim.} \hyperref[thm:#1]{(\Roman{thm#1})}} #2}
 
 \newcommand{\proposizione}[3][]{
     \stepcounter{proposizione}
@@ -166,7 +165,7 @@ heightrounded}
 		\paragraph{Proposizione
 			\textit{p.}\roman{proposizione} \label{prp:#2} #1} 
 		#3}
-\newcommand{\dimostrazioneprop}[2]{\paragraph{\textit{dim.} \hyperref[prp:#1]{(\textit{p.}\roman{prp#1})}} #2\QED}
+\newcommand{\dimostrazioneprop}[2]{\paragraph{\textit{dim.} \hyperref[prp:#1]{(\textit{p.}\roman{prp#1})}} #2}
 
 %%%%
 
