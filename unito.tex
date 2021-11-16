@@ -144,6 +144,7 @@ heightrounded}
 \newcounter{proposizione}
 \newcounter{osservazione}[section]
 \newcounter{lemma}
+\newcounter{corollario}
 
 \newcommand{\esempi}[2][]{\stepcounter{esempi}\paragraph{Esempi #1 (\thesection.\theesempi)\label{es:\thesection.\theesempi}} #2}
 \newcommand{\esempio}[2][]{\stepcounter{esempi}\paragraph{Esempio #1 (\thesection.\theesempi)\label{\thesection.\theesempi}} #2}
@@ -179,6 +180,13 @@ heightrounded}
 			\textit{l.}\roman{lemma} \label{lmm:#2} #1} 
 		#3}
 \newcommand{\dimostrazionelem}[2]{\paragraph{\textit{dim.} \hyperref[lmm:#1]{(\textit{l.}\roman{lmm#1})}} #2}
+
+\newcommand{\corollario}[3][]{
+    \stepcounter{corollario}
+		\newcounter{crl#2}\addtocounter{crl#2}{\thecorollario}
+		\paragraph{Corollario\label{crl:#2} #1} 
+		#3}
+\newcommand{\dimostrazionecrl}[2]{\paragraph{\hyperref[crl:#1]{\textit{dim.} }} #2}
 
 %%%%
 
