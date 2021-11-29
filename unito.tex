@@ -79,6 +79,10 @@
 \DeclareMathOperator{\arcsec}{arcsec}
 \DeclareMathOperator{\arccot}{arccot}
 \DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\spettro}{Spettro}
+\DeclareMathOperator{\nulls}{nullspace}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\gl}{GL}
 \DeclareMathOperator{\Id}{Id}
 \DeclareMathOperator{\id}{Id}
 \DeclareMathOperator{\I}{I}
@@ -153,6 +157,7 @@ heightrounded}
 \newcommand{\osservazione}[2][]{\stepcounter{osservazione}\paragraph{Osservazione (\thesection.\theosservazione)\label{oss:\thesection.\theosservazione}#1} #2}
 \newcommand{\esercizio}[3][]{\paragraph{Esercizio #1} #2 
 \paragraph{Soluzione} #3}
+\newcommand{\nota}[1]{#1}
 
 \usepackage[fulladjust]{marginnote} %to use marginnote for date notes
 
@@ -208,3 +213,14 @@ heightrounded}
 \newcommand{\referenze}[2]{
 	\phantomsection{}#2\textsuperscript{\textcolor{blue}{\textbf{#1}}}
 }
+
+\def\restriction#1#2{\mathchoice
+              {\setbox1\hbox{${\displaystyle #1}_{\scriptstyle #2}$}
+              \restrictionaux{#1}{#2}}
+              {\setbox1\hbox{${\textstyle #1}_{\scriptstyle #2}$}
+              \restrictionaux{#1}{#2}}
+              {\setbox1\hbox{${\scriptstyle #1}_{\scriptscriptstyle #2}$}
+              \restrictionaux{#1}{#2}}
+              {\setbox1\hbox{${\scriptscriptstyle #1}_{\scriptscriptstyle #2}$}
+              \restrictionaux{#1}{#2}}}
+\def\restrictionaux#1#2{{#1\,\smash{\vrule height .8\ht1 depth .85\dp1}}_{\,#2}} %restringere dominio F
