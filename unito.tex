@@ -25,6 +25,10 @@
 \newcommand{\straniero}[1]{\textit{#1}} %parole straniere
 \newcommand{\titolo}[1]{\textsc{#1}} %titoli
 
+%numerazione equazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\numberwithin{equation}{section}
+
 %citazioni
 \usepackage{lineno}
 
