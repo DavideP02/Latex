@@ -25,10 +25,6 @@
 \newcommand{\straniero}[1]{\textit{#1}} %parole straniere
 \newcommand{\titolo}[1]{\textsc{#1}} %titoli
 
-%numerazione equazioni
-\renewcommand{\theequation}{\thesection.\arabic{equation}}
-\numberwithin{equation}{section}
-
 %citazioni
 \usepackage{lineno}
 
@@ -58,7 +54,7 @@
 \makeatother
 
 % pacchetti matematica
-\usepackage[leqno,intlimits]{amsmath} 
+\usepackage[intlimits]{amsmath} 
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{yhmath}
@@ -233,3 +229,7 @@ heightrounded}
               {\setbox1\hbox{${\scriptscriptstyle #1}_{\scriptscriptstyle #2}$}
               \restrictionaux{#1}{#2}}}
 \def\restrictionaux#1#2{{#1\,\smash{\vrule height .8\ht1 depth .85\dp1}}_{\,#2}} %restringere dominio F
+
+%numerazione equazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\numberwithin{equation}{section}
