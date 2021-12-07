@@ -16,8 +16,20 @@
 \usepackage{lipsum} % lorem ipsum
 \usepackage{xcolor} % colori in latex
 
-\usepackage[hang]{footmisc} %per le note a pié pagina
+\usepackage[hang, perpage,symbol*]{footmisc} %per le note a pié pagina
 \footnotemargin=0.8em
+\DefineFNsymbolsTM{myfnsymbols}{% def. from footmisc.sty "bringhurst" symbols
+  \textdagger    \dagger
+  \textdaggerdbl \ddagger
+  \textsection   \mathsection
+  \textbardbl    \|%
+  \textparagraph \mathparagraph
+  \textdagger\textdagger \dagger\dagger
+  \textdaggerdbl\textdaggerdbl \ddagger\ddagger
+  \textsection\textsection \mathsection\mathsection
+  \textparagraph\textparagraph \mathparagraph\mathparagraph
+}%
+\setfnsymbol{myfnsymbols}
 
 \usepackage{parskip} % rimuove l'indentazione dei nuovi paragrafi
 
