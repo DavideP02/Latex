@@ -16,7 +16,7 @@
 \usepackage{lipsum} % lorem ipsum
 \usepackage{xcolor} % colori in latex
 
-\usepackage[hang, perpage,symbol*]{footmisc} %per le note a pié pagina
+\usepackage[hang, perpage, symbol*]{footmisc} %per le note a pié pagina
 \footnotemargin=0.8em
 \DefineFNsymbolsTM{myfnsymbols}{% def. from footmisc.sty "bringhurst" symbols
   \textdagger    \dagger
@@ -30,6 +30,18 @@
   \textparagraph\textparagraph \mathparagraph\mathparagraph
 }%
 \setfnsymbol{myfnsymbols}
+%comandi per footnotemark consecutivi
+	\newcommand{\footnotemarke}{%
+	\begin{NoHyper}
+		\footnotemark
+	\end{NoHyper}}
+	\newcommand{\footnotemarkk}[1]{%
+		\hyperref[#1]{\footnotemarke}}
+	\newcommand{\consecfoottext}[3]{
+		\addtocounter{footnote}{-#1}
+		\footnotetext{#3\label{#2}}
+		\addtocounter{footnote}{#1}
+	}
 
 \usepackage{parskip} % rimuove l'indentazione dei nuovi paragrafi
 
