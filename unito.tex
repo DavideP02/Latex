@@ -8,7 +8,7 @@
 
 \usepackage{fancyhdr}
 \usepackage{tikz}
-\usetikzlibrary{matrix}
+\usetikzlibrary{matrix, cd}
 
 \usepackage{graphicx} % inserire immagini
 \usepackage{multicol} % due colonne
@@ -48,7 +48,12 @@
 %definizioni particolari
 \newcommand{\straniero}[1]{\textit{#1}} %parole straniere
 \newcommand{\titolo}[1]{\textsc{#1}} %titoli
-\newcommand{\qedd}{\makeatletter\displaymath@qed}
+%\newcommand{\qedd}{\makeatletter\displaymath@qed}
+
+%QED
+\newcommand{\qedd}{\tag*{$\square$}
+	%\makeatletter\displaymath@qed\makeatother%
+}
 
 %citazioni
 \usepackage{lineno}
@@ -261,3 +266,12 @@ heightrounded}
 %numerazione equazioni
 \renewcommand{\theequation}{\thesection.\arabic{equation}}
 \numberwithin{equation}{section}
+
+%TOdOS
+\usepackage{tcolorbox}
+\newcommand{\todo}[1]{%
+\begin{tcolorbox}[colframe=red, colback=white]
+	\centering
+	#1
+\end{tcolorbox}
+}
