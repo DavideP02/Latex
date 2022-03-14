@@ -9,6 +9,8 @@
 \usepackage{fancyhdr}
 \usepackage{tikz}
 \usetikzlibrary{matrix, cd, patterns}
+\usepackage{mathrsfs} %per geogebra
+
 
 \usepackage{graphicx} % inserire immagini
 \usepackage{multicol} % due colonne
@@ -42,6 +44,14 @@
 		\footnotetext{#3\label{#2}}
 		\addtocounter{footnote}{#1}
 	}
+
+	%esempio:
+	% \mathscr{B}=\{\underset{\footnotemarkk{e1}}{\underbrace{v_1, \cdots, v_{k_1}}}, \underset{\footnotemarkk{e2}}{\underbrace{v_{k_1+1} , \cdots, v_{k_2+k_1}}}, \cdots, \underset{\footnotemark}{\underbrace{v_{k_{l-1}+kl }}}\}
+	% \]
+	% \consecfoottext{2}{e1}{autovettori rispetto a $ \lambda_1 $}
+	% \consecfoottext{1}{e2}{autovettori rispetto a $ \lambda_2 $}
+	% \footnotetext{autovettore rispetto a $ \lambda_{l}  $}
+	% \todo{Manca matrice}
 
 \usepackage{parskip} % rimuove l'indentazione dei nuovi paragrafi
 
@@ -92,7 +102,8 @@
 \usepackage{mathrsfs}
 
 \usepackage{pgfplots} % stampare le funzioni
-	\pgfplotsset{/pgf/number format/use comma,compat=newest}
+	\pgfplotsset{/pgf/number format/use comma,compat=1.15}
+	%\pgfplotsset{compat=1.15} %per geogebra
 	
 \usepackage{cancel} % semplificare
 
