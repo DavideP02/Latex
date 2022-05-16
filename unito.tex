@@ -6,10 +6,20 @@
 \usepackage[style=numeric]{biblatex}
 \usepackage{microtype}
 
+\usepackage{centernot}
+\usepackage[outline]{contour}
+\contourlength{3pt}
+
 \usepackage{fancyhdr}
 \usepackage{tikz}
-\usetikzlibrary{matrix, cd, patterns}
+\usetikzlibrary{matrix, cd, patterns, calc, decorations.pathreplacing}
 \usepackage{mathrsfs} %per geogebra
+\tikzset
+{
+  %surface/.style={fill=black!10, shading=ball,fill opacity=0.4},
+  plane/.style={black,pattern=north east lines},
+  curve/.style={black,line width=0.5mm},
+}
 
 
 \usepackage{graphicx} % inserire immagini
@@ -59,7 +69,6 @@
 \newcommand{\straniero}[1]{\textit{#1}} %parole straniere
 \newcommand{\titolo}[1]{\textsc{#1}} %titoli
 %\newcommand{\qedd}{\makeatletter\displaymath@qed}
-
 %QED
 \newcommand{\qedd}{\tag*{$\square$}
 	%\makeatletter\displaymath@qed\makeatother%
@@ -118,7 +127,6 @@
 % definizione comandi matematici
 
 \DeclareMathOperator{\epi}{Epi}
-\DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\graph}{graph}
 \DeclareMathOperator{\arcsec}{arcsec}
 \DeclareMathOperator{\arccot}{arccot}
@@ -176,9 +184,9 @@
 			#1
 		\end{empheq}}
 
-\usepackage{geometry}
-\geometry{papersize={17.78cm,25.4cm}, bottom=3cm,%
-heightrounded}
+% \usepackage{geometry}
+% \geometry{papersize={17.78cm,25.4cm}, bottom=3cm,%
+% heightrounded}
 
 \usepackage{hyperref}
 \hypersetup{%
