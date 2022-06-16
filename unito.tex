@@ -113,6 +113,7 @@
 \usepackage{pgfplots} % stampare le funzioni
 	\pgfplotsset{/pgf/number format/use comma,compat=1.15}
 	%\pgfplotsset{compat=1.15} %per geogebra
+	\usepgfplotslibrary{fillbetween}
 	
 \usepackage{cancel} % semplificare
 
@@ -183,10 +184,6 @@
 	\newcommand{\equazione}[1]{	\begin{empheq}[box=\mygraybox]{equation*}
 			#1
 		\end{empheq}}
-
-% \usepackage{geometry}
-% \geometry{papersize={17.78cm,25.4cm}, bottom=3cm,%
-% heightrounded}
 
 \usepackage{hyperref}
 \hypersetup{%
@@ -289,9 +286,23 @@
 
 %TOdOS
 \usepackage{tcolorbox}
+\tcbuselibrary{breakable}
 \newcommand{\todo}[1]{%
 \begin{tcolorbox}[colframe=red, colback=white]
 	\centering
 	#1
 \end{tcolorbox}
 }
+
+%Ambiente EXCURSUS
+\newenvironment{excursus}[1]%
+{
+	\begin{tcolorbox}[colback=white,colframe=white!20!black,title=#1, sharpish corners, breakable, pad at break*=2mm]
+}%
+{\end{tcolorbox}}
+
+%%%%%% GEOMETRY SEMPRE PER ULTIMO
+
+% \usepackage{geometry}
+% \geometry{papersize={17.78cm,25.4cm}, bottom=3cm,%
+% heightrounded}
